@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "806503611323",
+    "project_id": "engsoft-loja-cafe",
+    "storage_bucket": "engsoft-loja-cafe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806503611323:android:6d46aa8e0ed3e41c4f629e",
+        "android_client_info": {
+          "package_name": "com.example.app05_loja_cafe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806503611323-mdfpa4mrksg5i75sk18hp16fib8rgdt6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZsFwmBRQC6a2TRAMIMt6AeTR0lWdwbZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806503611323-mdfpa4mrksg5i75sk18hp16fib8rgdt6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
