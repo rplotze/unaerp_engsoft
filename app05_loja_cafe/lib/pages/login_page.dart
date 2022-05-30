@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import 'mensagem.dart';
+import 'widgets/campo_texto.dart';
+import 'widgets/mensagem.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -50,38 +51,10 @@ class _LoginPageState extends State<LoginPage> {
               ),
               child: const Text('Criar conta'),
               onPressed: () {
-                Navigator.pushNamed(context, '/criar_conta');
+                Navigator.pushNamed(context, 'criar_conta');
               },
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  //
-  // CAMPO DE TEXTO
-  //
-  campoTexto(texto, controller, icone, {senha}) {
-    return TextField(
-      controller: controller,
-      obscureText: senha != null ? true : false,
-      style: const TextStyle(
-        color: Colors.brown,
-        fontWeight: FontWeight.w300,
-      ),
-      decoration: InputDecoration(
-        prefixIcon: Icon(icone, color: Colors.brown),
-        prefixIconColor: Colors.brown,
-        labelText: texto,
-        labelStyle: const TextStyle(color: Colors.brown),
-        border: const OutlineInputBorder(),
-        focusColor: Colors.brown,
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.brown,
-            width: 0.0,
-          ),
         ),
       ),
     );
