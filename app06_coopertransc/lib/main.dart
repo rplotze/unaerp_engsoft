@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'pages/login_page.dart';
 import 'pages/vez_page.dart';
+import 'pages/viagens_page.dart';
 
 void main() {
   runApp(
@@ -12,6 +13,7 @@ void main() {
       routes: {
         'vez': (context) => const VezPage(),
         'login': (context) => const LoginPage(),
+        'viagens': (context) => const ViagensPage(),
       },
     ),
   );

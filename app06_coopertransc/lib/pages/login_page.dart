@@ -52,19 +52,29 @@ class _LoginPageState extends State<LoginPage> {
                   'Token: ${dados['token'].toString()}',
                   style: TextStyle(fontSize: 10),
                 ),
-
                 const SizedBox(
                   height: 20,
                 ),
                 TextButton(
-                    onPressed: () {
-                      Navigator.pushNamed(
-                        context,
-                        'vez',
-                        arguments: dados['token'],
-                      );
-                    },
-                    child: const Text('Vez')),
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      'vez',
+                      arguments: dados['token'],
+                    );
+                  },
+                  child: const Text('Vez'),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      'viagens',
+                      arguments: dados['token'],
+                    );
+                  },
+                  child: const Text('Viagens'),
+                ),
               ],
             );
           } else {
