@@ -29,21 +29,22 @@ class Vez {
 
   factory Vez.fromJson(Map<String, dynamic> json) {
     return Vez(
-      json['id'],
-      json['data_marcacao'],
-      json['hora_marcacao'],
-      json['id_unidade'],
-      json['cooperado'],
-      json['veiculo'],
-      json['Engatado'],
-      json['tipo_veiculo'],
-      json['unidade'],
-      json['estados'],
-      json['chegada'],
+      json['id']  ?? '',
+      json['data_marcacao']  ?? '',
+      json['hora_marcacao']  ?? '',
+      json['id_unidade']  ?? '',
+      json['cooperado']  ?? '',
+      json['veiculo']  ?? '',
+      json['Engatado']  ?? '',
+      json['tipo_veiculo']  ?? '',
+      json['unidade']  ?? '',
+      json['estados']  ?? '',
+      json['chegada']  ?? '',
     );
   }
 
   Map<String, dynamic> toJson() {
+
     var data = <String, dynamic>{};
     data['id'] = id;
     data['data_marcacao'] = dataMarcacao;

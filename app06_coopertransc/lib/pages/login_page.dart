@@ -16,10 +16,9 @@ class _LoginPageState extends State<LoginPage> {
   var USUARIO = '040256088472';
   var SENHA = '040256088472';
 
-  Future<Map<String, dynamic>> login(usr,pwd) async {
-
+  Future<Map<String, dynamic>> login(usr, pwd) async {
     var resposta = await http.post(
-      Uri.parse(Api.URL + '/login'),
+      Uri.parse(Api.URL + 'login'),
       headers: {
         "Accept": "application/json",
       },
@@ -36,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder(
-        future: login(USUARIO,SENHA),
+        future: login(USUARIO, SENHA),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             //
@@ -49,8 +48,23 @@ class _LoginPageState extends State<LoginPage> {
                 Text('ID: ${dados['id'].toString()}'),
                 Text('Nome: ${dados['nome'].toString()}'),
                 Text('Username: ${dados['username'].toString()}'),
-                Text('Token: ${dados['token'].toString()}', style: TextStyle(fontSize: 10),),
-                //Center(child: Text(snapshot.data.toString())),
+                Text(
+                  'Token: ${dados['token'].toString()}',
+                  style: TextStyle(fontSize: 10),
+                ),
+
+                const SizedBox(
+                  height: 20,
+                ),
+                TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(
+                        context,
+                        'vez',
+                        arguments: dados['token'],
+                      );
+                    },
+                    child: const Text('Vez')),
               ],
             );
           } else {
